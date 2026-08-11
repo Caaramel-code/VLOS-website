@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kom ik in aanmerking? - VLOS</title>
+    <link rel="stylesheet" href="css/stijl.css">
+</head>
+<body>
+
+    <nav>
+        <img src="afbeeldingen/algemeen/Logo-met-onderschrift-wit.png" alt="Logo VLOS" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="over-ons/wie-zijn-wij.html">Over ons</a>
+                <div class="dropdown-inhoud">
+                    <a href="over-ons/wie-zijn-wij.html">Wie zijn wij</a>
+                    <a href="over-ons/visie-missie.html">Visie & missie</a>
+                    <a href="over-ons/ons-verhaal.html">Ons verhaal</a>
+                    <a href="over-ons/samenwerking.html">In samenwerking met</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="werking/hulpverlening.html">Werking</a>
+                <div class="dropdown-inhoud">
+                    <a href="werking/hulpverlening.html">Hulpverlening</a>
+                    <a href="werking/maatschappij.html">Maatschappij</a>
+                    <a href="werking/rondleidingen.html">Rondleidingen</a>
+                </div>
+            </li>
+
+            <li><a href="ik-zoek-hulp.html">Ik zoek hulp</a></li>
+            <li><a href="nieuws.html">Nieuws</a></li>
+            <li><a href="wat-kan-jij-doen.html">Wat kan jij doen?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Kom ik in aanmerking?</h1>
+    </header>
+
+    <main>
+        <section class="vragenlijst">
+
+            <!-- Stap 1 -->
+            <div class="vraag-stap" id="stap-1">
+                <h2>Heb je een Belgische identiteitskaart of een B-kaart?</h2>
+                <div class="vraag-knoppen">
+                    <button class="knop" data-ga-naar="niet-welkom-id">Ja</button>
+                    <button class="knop" data-ga-naar="stap-2">Nee</button>
+                </div>
+            </div>
+
+            <!-- Stap 2 -->
+            <div class="vraag-stap" id="stap-2" style="display: none;">
+                <h2>Heb je een A-kaart?</h2>
+                <div class="vraag-knoppen vraag-knoppen-verticaal">
+                    <button class="knop" data-ga-naar="niet-welkom-id">Ik heb al lang een A-kaart</button>
+                    <button class="knop" data-ga-naar="welkom">Ik ben bang dat ik mijn A-kaart ga verliezen</button>
+                    <button class="knop" data-ga-naar="welkom">Ik heb nog maar heel kort mijn A-kaart</button>
+                    <button class="knop" data-ga-naar="stap-3">Ik heb geen A-kaart</button>
+                    <button class="knop" data-ga-naar="stap-3">Ik heb alleen een annex of oranje kaart</button>
+                </div>
+            </div>
+
+            <!-- Stap 3 -->
+            <div class="vraag-stap" id="stap-3" style="display: none;">
+                <h2>Woon je in een opvangcentrum?</h2>
+                <div class="vraag-knoppen">
+                    <button class="knop" data-ga-naar="niet-welkom-opvang">Ja</button>
+                    <button class="knop" data-ga-naar="welkom">Nee</button>
+                </div>
+            </div>
+
+            <!-- Resultaat: welkom -->
+            <div class="vraag-stap resultaat resultaat-ja" id="welkom" style="display: none;">
+                <h2>Welkom bij VLOS!</h2>
+                <p>Kom naar VLOS. Samen kijken we hoe we je kunnen helpen. Hier vind je meer info: <a href="ik-zoek-hulp.html">Ik zoek hulp</a></p>
+                <button class="knop knop-opnieuw" data-ga-naar="stap-1">Opnieuw beginnen</button>
+            </div>
+
+            <!-- Resultaat: niet welkom, heeft duurzaam verblijf -->
+            <div class="vraag-stap resultaat resultaat-nee" id="niet-welkom-id" style="display: none;">
+                <h2>Nee, VLOS is niet de juiste organisatie voor jou.</h2>
+                <p>Met een Belgische identiteitskaart of B-kaart heb je veel organisaties waar je terecht kan voor hulp. Het OCMW, CAW... Bij VLOS hebben mensen zonder wettig verblijf voorrang.</p>
+                <button class="knop knop-opnieuw" data-ga-naar="stap-1">Opnieuw beginnen</button>
+            </div>
+
+            
+            <!-- Resultaat: niet welkom, opvangcentrum -->
+            <div class="vraag-stap resultaat resultaat-nee" id="niet-welkom-opvang" style="display: none;">
+                <h2>Nee, VLOS ben je welkom als je NIET in een centrum woont</h2>
+                <p> Vraag hulp aan je assistent. Heb je negatief en moet je het centrum verlaten, dan ben je wel welkom.</p>
+                <button class="knop knop-opnieuw" data-ga-naar="stap-1">Opnieuw beginnen</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VLOS - Vluchtelingen Ondersteuning Sint-Niklaas</p>
+        <p><a href="contact.html">Contact</a> | <a href="privacybeleid.html">Privacybeleid</a></p>
+    </footer>
+
+    <script>
+        const alleStappen = document.querySelectorAll(".vraag-stap");
+        const alleKnoppen = document.querySelectorAll(".knop[data-ga-naar]");
+
+        alleKnoppen.forEach(function(knop) {
+
+            knop.addEventListener("click", function() {
+
+                const doel = knop.getAttribute("data-ga-naar");
+
+                alleStappen.forEach(function(stap) {
+                    stap.style.display = "none";
+                });
+
+                document.getElementById(doel).style.display = "block";
+
+                document.getElementById(doel).scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        });
+    </script>
+
+</body>
+</html>

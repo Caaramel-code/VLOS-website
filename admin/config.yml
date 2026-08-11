@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: JOUW-GEBRUIKERSNAAM/JOUW-REPOSITORY-NAAM
+  branch: main
+ 
+media_folder: "afbeeldingen/nieuws"
+public_folder: "/afbeeldingen/nieuws"
+ 
+collections:
+  - name: "nieuws"
+    label: "Nieuwsberichten"
+    folder: "nieuws-berichten"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Foto", name: "afbeelding", widget: "image", required: false }
+      - { label: "Korte samenvatting", name: "samenvatting", widget: "text" }
+      - { label: "Volledige tekst", name: "body", widget: "markdown" }
+ 

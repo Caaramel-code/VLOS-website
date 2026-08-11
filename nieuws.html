@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nieuws - VLOS</title>
+    <link rel="stylesheet" href="css/stijl.css">
+</head>
+<body>
+
+    <nav>
+        <img src="afbeeldingen/algemeen/Logo-met-onderschrift-wit.png" alt="Logo VLOS" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="over-ons/wie-zijn-wij.html">Over ons</a>
+                <div class="dropdown-inhoud">
+                    <a href="over-ons/wie-zijn-wij.html">Wie zijn wij</a>
+                    <a href="over-ons/visie-missie.html">Visie & missie</a>
+                    <a href="over-ons/ons-verhaal.html">Ons verhaal</a>
+                    <a href="over-ons/samenwerking.html">In samenwerking met</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="werking/hulpverlening.html">Werking</a>
+                <div class="dropdown-inhoud">
+                    <a href="werking/hulpverlening.html">Hulpverlening</a>
+                    <a href="werking/maatschappij.html">Maatschappij</a>
+                    <a href="werking/rondleidingen.html">Rondleidingen</a>
+                </div>
+            </li>
+
+            <li><a href="ik-zoek-hulp.html">Ik zoek hulp</a></li>
+            <li><a href="nieuws.html">Nieuws</a></li>
+            <li><a href="wat-kan-jij-doen.html">Wat kan jij doen?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Nieuws</h1>
+    </header>
+
+    <main>
+
+        <section class="eigen-nieuws">
+            <h2>Laatste berichten</h2>
+            <div id="nieuws-lijst">
+                <!-- Hier komen straks automatisch de berichten uit de CMS -->
+                <p>Binnenkort volgt hier ons eigen nieuwsoverzicht.</p>
+            </div>
+        </section>
+
+        <section class="facebook-feed">
+            <h2>Volg ons op Facebook</h2>
+
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v19.0"></script>
+
+            <div class="fb-page"
+                 data-href="https://www.facebook.com/VLOSvzw"
+                 data-tabs="timeline"
+                 data-width="500"
+                 data-height="600"
+                 data-small-header="false"
+                 data-adapt-container-width="true"
+                 data-hide-cover="false"
+                 data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/VLOSvzw" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/VLOSvzw">VLOS vzw</a>
+                </blockquote>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VLOS - Vluchtelingen Ondersteuning Sint-Niklaas</p>
+        <p><a href="contact.html">Contact</a> | <a href="privacybeleid.html">Privacybeleid</a></p>
+    </footer>
+
+</body>
+</html>

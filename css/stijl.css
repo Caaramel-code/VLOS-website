@@ -53,9 +53,8 @@ body {
 header {
     background-color: var(--donkergroen);
     color: white;
-    padding: 40px 30px;
-    height: 60px;
-
+    padding: 1.25rem 1.25rem;
+    
 }
 
 h1, h2, h3 {
@@ -65,8 +64,12 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 5vw, 6rem);
     color: white;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.9rem; }
 }
 
 h2 {
@@ -86,11 +89,16 @@ font-size: 1.25rem;
 /* ===== LAYOUT ===== */
 nav {
     background-color: var(--donkergroen);
-    padding: 15px 30px;
+    padding: 0.8rem 1.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
 }
 
 nav ul {
@@ -109,6 +117,10 @@ nav a {
     font-size: 1.50rem;
 }
 
+@media (max-width: 600px) {
+    nav a { font-size: 1.1rem; }
+}
+
 main {
      text-align: left;;
 }
@@ -117,8 +129,8 @@ footer {
     background-color: var(--donkergroen);
     color: white;
     text-align: center;
-    padding: 30px;
-    margin-top: 60px;
+    padding: 1.25rem;
+    margin-top: 2.5rem;
 }
 
 footer a {
@@ -138,10 +150,16 @@ img {
     border-radius: 10px;
 }
 
+@media (max-width: 600px) {
+    img { height: 200px; }
+}
+
+
 
 /* ===== COMPONENTEN ===== */
 .logo {
-    width: 20%;
+    max-height: clamp(1.8rem, 5vw, 3rem);
+    border-radius: 0.2rem;
 }
 
 .dropdown {
@@ -207,6 +225,17 @@ section {
 
 .in-het-kort h2 {
     color: white;
+}
+
+@media (max-width: 600px) {
+    .in-het-kort,
+    section {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .in-het-kort li {
+        font-size: 1.3rem;
+    }
 }
 
 /* ===== PAGINA-SPECIFIEK: Visie & Missie ===== */
@@ -422,6 +451,14 @@ section {
     font-family: 'Bobby Jones', sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    .uren-tabel th,
+    .uren-tabel td {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
 }
 
 .opvallend-vak {

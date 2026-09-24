@@ -8,39 +8,50 @@
 </head>
 <body>
 
-    <nav>
-         <a href="index.html">
+   <nav>
+        
+    <a href="index.html">
         <img src="afbeeldingen/algemeen/Logo-met-onderschrift-wit.png" alt="Logo VLOS" class="logo">
-        </a>
+    </a>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
+    <button class="hamburger" id="hamburger" aria-label="Menu openen/sluiten">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-            <li class="dropdown">
-                <a href="over-ons/wie-zijn-wij.html">Over ons</a>
-                <div class="dropdown-inhoud">
-                    <a href="over-ons/wie-zijn-wij.html">Wie zijn wij</a>
-                    <a href="over-ons/visie-missie.html">Visie & missie</a>
-                    <a href="over-ons/ons-verhaal.html">Ons verhaal</a>
-                    <a href="over-ons/samenwerking.html">In samenwerking met</a>
-                </div>
-            </li>
+    <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
 
-            <li class="dropdown">
-                <a href="werking/hulpverlening.html">Werking</a>
-                <div class="dropdown-inhoud">
-                    <a href="werking/hulpverlening.html">Hulpverlening</a>
-                    <a href="werking/maatschappij.html">Maatschappij</a>
-                    <a href="werking/rondleidingen.html">Rondleidingen</a>
-                </div>
-            </li>
+        <li class="dropdown">
+            <a href="over-ons/wie-zijn-wij.html">Over ons</a>
+            <div class="dropdown-inhoud">
+                <a href="over-ons/wie-zijn-wij.html">Wie zijn wij</a>
+                <a href="over-ons/visie-missie.html">Visie & missie</a>
+                <a href="over-ons/ons-verhaal.html">Ons verhaal</a>
+                <a href="over-ons/samenwerking.html">In samenwerking met</a>
+            </div>
+        </li>
 
-            <li><a href="ik-zoek-hulp.html">Ik zoek hulp</a></li>
-            <li><a href="nieuws.html">Nieuws</a></li>
-            <li><a href="wat-kan-jij-doen.html">Wat kan jij doen?</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <li class="dropdown">
+            <a href="werking/hulpverlening.html">Werking</a>
+            <div class="dropdown-inhoud">
+                <a href="werking/hulpverlening.html">Hulpverlening</a>
+                <a href="werking/maatschappij.html">Maatschappij</a>
+                <a href="werking/rondleidingen.html">Rondleidingen</a>
+            </div>
+        </li>
+
+        <li><a href="ik-zoek-hulp.html">Ik zoek hulp</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="wat-kan-jij-doen.html">Steun</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
     </nav>
+
+    <script src="js/script.js"></script>
+    
+
 
 
     <header>
@@ -106,7 +117,7 @@
 
     <footer>
         <p>&copy; 2026 VLOS - Vluchtelingen Ondersteuning Sint-Niklaas</p>
-        <p><a href="contact.html">Contact</a> | <a href="privacybeleid.html">Privacybeleid</a></p>
+        <p><a href="contact.html">Contact</a> | <a href="privacy.html">Privacybeleid</a></p>
     </footer>
 
 </body>
